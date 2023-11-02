@@ -6,25 +6,28 @@ public class Search {
 		Node next;
 		
 		Node(int data) {
-			this.data=data;
+			this.data=data; //creating linked list
 			this.next=null;
 		}
 	}
-	
+
+	//adding elements at the starting of the index
 	public void add(int data) {
-		Node newNode = new Node(data);
+		Node newNode = new Node(data);	
+		//if head is null then take, the value of newNode in head
 		if(head==null) {
 			head=newNode;
 			return;
 		}
 		
-		Node currNode = head;
+		Node currNode = head;		//taking value of head in currNode
 		while(currNode.next!=null) {
 			currNode=currNode.next;
 		}
 		currNode.next=newNode;
 	}
-	
+
+	//creating a function to find the element in the linked list
 	int Find(int element) {
 		Node currNode=head;
 		int index=0;
@@ -38,7 +41,8 @@ public class Search {
 		}
 		return -1;
 	}
-	
+
+	//creating a function to print the linked list
 	public void display() {
 		Node currNode = head;
 		while(currNode!=null) {
@@ -49,25 +53,25 @@ public class Search {
 	}
 
 	public static void main(String[] args) {
-		Search list = new Search();
+		Search list = new Search();	//list is the name of the linked list
 		
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.print("Enter the no. of elements: ");
 		int n = sc.nextInt();
 		
-		  System.out.println("Enter the elements:");
+		System.out.println("Enter the elements:");
 	        for (int i = 0; i < n; i++) {
 	            int data = sc.nextInt();
 	            list.add(data);
 	        }
 	        
-	   list.display();
+	   list.display(); 	//will call the display func & will print the linked list
 	   
 	   //searching the input no.
 	   System.out.print("Enter the element to search: ");
-	   int element = sc.nextInt();
-	   int index = list.Find(element);
+	   int element = sc.nextInt();		//taking the input to find the element
+	   int index = list.Find(element);	//finding the element by callinf Find func
 	   
 	   if(index!=-1) {
 		   System.out.print(element+" found at "+index);
