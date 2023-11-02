@@ -1,0 +1,58 @@
+Queue
+
+Four types of queues
+1 Simple or linear
+2 Circular
+3 Enqueue
+4 Double ended
+
+
+		1Simple or Linear Queue
+
+Rear = Max_size - 1
+We cannot insert value in the simple queue if the rear = Max_size-1
+
+		2Circular Queue
+
+A circular queue is a type of queue where the front and rear pointers wrap around
+when they reach the end of the queue. This allows for efficient use of space in cases where a queue can
+overflow.
+
+Why was the concept of the circular queue introduced?
+There was one limitation in the array implementation of Queue. If the rear reaches to the end position of the Queue
+then there might be possibility that some vacant spaces are left in the beginning wich cannot be utilized. So, to overcome
+such limitations, the concept of circular queue was invented.
+
+		3Enqueue
+		#Algorithm for enqueue
+1st Condn:
+if
+	F=0
+	R=Max_size-1
+	print(queue is full)
+
+2nd Condn:
+if
+	F=-1
+	R=-1
+
+set
+	F=0
+	R=0
+
+else
+	R=R+1
+	insert
+
+		Algorithm for inserting an element
+There are two scenarios in which queue is not full
+1> rear!=max-1
+2> front!=0 and rear=max-1
+
+There are two scenarios in which element cannot be inserted
+1>front==0 and rear=max-1
+2>front==rear+1
+
+
+
+
